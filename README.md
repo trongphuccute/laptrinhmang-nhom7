@@ -1,10 +1,24 @@
-# 🕒 ClockDisplay Project
+# Messenger Lite (Simple Chat App)
 
-**Đề tài:** Xây dựng chương trình hiển thị thời gian đồng hồ  
-**Môn học:** Lập trình mạng (Python)
+Đồ án Mạng Máy Tính - Hệ thống Chat Mạng Real-time đơn giản.
 
-## 👥 Thành viên nhóm
+## 1. Cài đặt môi trường
 
-| STT | Họ và tên | Vai trò |
+Chạy lệnh sau để cài các thư viện cần thiết:
+pip install -r requirements.txt
 
-## 📦 Cấu trúc dự án
+## 2. Khởi tạo Database
+
+Chạy script sau 1 lần duy nhất để tạo file chat.db:
+python create_db.py
+
+## 3. Cách chạy chương trình
+
+Hệ thống cần chạy 3 thành phần theo thứ tự sau:
+- Bước 1: Chạy Microservice (gRPC)**
+python grpc_server.py
+- Bước 2: Chạy Main Server**
+python MainServer.py
+- Bước 3: Chạy Client (Người dùng)**
+python client_gui.py
+(Có thể mở nhiều terminal để chạy nhiều Client cùng lúc)
