@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service UserValidation {
+  // Hàm kiểm tra user
+  rpc CheckUserStatus (UserRequest) returns (UserResponse) {}
+}
+
+message UserRequest {
+  int32 user_id = 1;
+  string username = 2;
+}
+
+message UserResponse {
+  bool is_banned = 1;   // True nếu bị cấm
+  string message = 2;   // Lý do cấm hoặc lời chào
+}
